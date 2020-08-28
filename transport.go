@@ -4,6 +4,7 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/asecurityteam/settings"
 	"github.com/asecurityteam/transport"
 )
 
@@ -33,4 +34,15 @@ func (*Component) New(ctx context.Context, conf *Config) (func(http.RoundTripper
 	return func(next http.RoundTripper) http.RoundTripper {
 		return transport.NewAccessLog()(next)
 	}, nil
+}
+
+// New is the top-level entrypoint for creating an `http.Transport` decorator
+// that emits an access logline on every `RoundTrip`.
+//
+// Useful when configuring a `Component` outside of the hierarchy of a
+// surrounding appliation.
+func New(ctx context.Context, source settings.Source) (func(http.RoundTripper) http.RoundTripper, error) {
+	var dst func(http.RoundTripper) http.RoundTripper
+	_ = settings.NewComponent(ctx, source, NewComponent(), &dst)
+	return dst, nil
 }
