@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/asecurityteam/settings"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -31,4 +32,13 @@ func TestAccessLog_New(t *testing.T) {
 	assert.Nil(t, err)
 	transport := wrapper(http.DefaultTransport)
 	assert.NotNil(t, transport)
+}
+
+func TestNew(t *testing.T) {
+	src := settings.NewMapSource(map[string]interface{}{
+		"accesslog": map[string]interface{}{},
+	})
+	wrapper, err := New(context.Background(), src)
+	assert.Nil(t, err)
+	assert.IsType(t, wrapper, func(next http.RoundTripper) http.RoundTripper { return nil }, wrapper)
 }
