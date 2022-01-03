@@ -10,8 +10,8 @@ import (
 )
 
 func TestConfig_Name(t *testing.T) {
-	Config := Config{}
-	assert.Equal(t, "accesslog", Config.Name())
+	accessLogConfig := Config{}
+	assert.Equal(t, "accesslog", accessLogConfig.Name())
 }
 
 func TestAccessLog_Settings(t *testing.T) {
