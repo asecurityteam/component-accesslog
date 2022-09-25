@@ -1,6 +1,6 @@
 module github.com/asecurityteam/component-accesslog
 
-go 1.13
+go 1.19
 
 require (
 	github.com/asecurityteam/settings v0.4.0
