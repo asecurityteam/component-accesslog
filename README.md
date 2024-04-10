@@ -1,8 +1,6 @@
 <a id="markdown-component-accesslogs---settings-component-for-logging-http-accesslogs" name="markdown-component-accesslogs---settings-component-for-logging-http-accesslogs" ></a>
 # component-accesslog - Settings component for logging HTTP accesslogs
 [![GoDoc](https://godoc.org/github.com/asecurityteam/component-accesslog?status.svg)](https://godoc.org/github.com/asecurityteam/component-accesslog)
-[![Build Status](https://travis-ci.org/asecurityteam/component-connstate.png?branch=master)](https://travis-ci.org/asecurityteam/component-accesslog)
-[![codecov.io](https://codecov.io/github/asecurityteam/component-connstate/coverage.svg?branch=master)](https://codecov.io/github/asecurityteam/component-accesslog?branch=master)
 <!-- TOC -->
 
 - [component-accesslog - Settings component for logging HTTP accesslogs](#component-accesslog---settings-component-for-logging-http-accesslogs)
