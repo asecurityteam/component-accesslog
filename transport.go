@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/asecurityteam/settings"
+	"github.com/asecurityteam/settings/v2"
 	"github.com/asecurityteam/transport"
 )
 

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/asecurityteam/settings"
+	"github.com/asecurityteam/settings/v2"
 	"github.com/stretchr/testify/assert"
 )
 
